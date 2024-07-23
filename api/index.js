@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 const app = express();
-const port = "eventiti-backend-aext0c8g8-hammadxsajs-projects.vercel.app";
+const port = 3000;
 
 // Enable CORS for all routes
 app.use(cors());
