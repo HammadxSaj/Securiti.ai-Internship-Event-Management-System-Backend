@@ -52,3 +52,7 @@ app.post("/send-email", async (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);
 });
+
+
+initializeNotificationService();
+listenForNewEvents();
