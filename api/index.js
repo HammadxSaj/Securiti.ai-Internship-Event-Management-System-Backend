@@ -54,5 +54,5 @@ app.listen(port, () => {
 });
 
 
-initializeNotificationService();
-listenForNewEvents();
+// initializeNotificationService();
+// listenForNewEvents();
