@@ -199,6 +199,8 @@ const listenForNewEvents = () => {
   });
 };
 
+export { initializeNotificationService, listenForNewEvents };
+
 // Start the services
 initializeNotificationService();
 listenForNewEvents();
