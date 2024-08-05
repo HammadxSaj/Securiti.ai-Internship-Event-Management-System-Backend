@@ -3,6 +3,7 @@ import express from "express";
 import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
 import cors from "cors";
+import { initializeNotificationService, listenForNewEvents } from './sendNotificationEmails.js';
 
 const app = express();
 const port = 3000;
@@ -49,10 +50,9 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+initializeNotificationService();
+listenForNewEvents();
+
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);
 });
-
-
-// initializeNotificationService();
-// listenForNewEvents();
