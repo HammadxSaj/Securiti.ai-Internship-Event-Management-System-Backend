@@ -113,7 +113,7 @@ const sendReminderEmail = async (eventId) => {
       `,
     };
     console.log(`Sending reminder email for event: ${eventId}`);
-    await axios.post("https://eventiti-backend.vercel.app/send-email", reminderEmailData, { httpsAgent: agent });
+    await axios.post("http://localhost:3000/send-email", reminderEmailData, { httpsAgent: agent });
   } catch (error) {
     console.error(`Error sending reminder email for event ${eventId}:`, error);
   }
@@ -148,7 +148,7 @@ const checkVotingAndSendEmails = async (eventId,votingDetailsData) => {
         };
         if (!emailSent) {
           console.log(`Sending winnernotification email for event: ${eventId} and winner:${winnerIdeaTitle}`);
-          await axios.post("https://eventiti-backend.vercel.app/send-email", emailData, { httpsAgent: agent });
+          await axios.post("http://localhost:3000/send-email", emailData, { httpsAgent: agent });
           await updateDoc(doc(db, "events", eventId, "details", "votingDetails"), { emailSent: true });
         } else {
           console.log("Email already sent for event: ", eventId);
