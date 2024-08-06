@@ -3,12 +3,10 @@ import express from "express";
 import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
 import cors from "cors";
-import dotenv from 'dotenv';
 import { initializeNotificationService, listenForNewEvents } from './sendNotificationEmails.js';
 
 const app = express();
 const port = 3000;
-dotenv.config();
 
 // Enable CORS for all routes
 app.use(cors());
@@ -53,7 +51,9 @@ app.post("/send-email", async (req, res) => {
 });
 
 app.listen(port, () => {
-  initializeNotificationService();
-  listenForNewEvents();
   console.log(`Listening on http://localhost:${port}`);
 });
+
+
+// initializeNotificationService();
+// listenForNewEvents();
