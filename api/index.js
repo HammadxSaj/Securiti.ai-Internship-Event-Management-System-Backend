@@ -3,7 +3,7 @@ import express from "express";
 import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
 import cors from "cors";
-// import { initializeNotificationService, listenForNewEvents } from './sendNotificationEmails.js';
+import { initializeNotificationService, listenForNewEvents } from './sendNotificationEmails.js';
 
 const app = express();
 const port = 3000;
@@ -55,10 +55,5 @@ app.listen(port, () => {
 });
 
 
-<<<<<<< Updated upstream
-// initializeNotificationService();
-// listenForNewEvents();
-=======
 initializeNotificationService();
 listenForNewEvents();
->>>>>>> Stashed changes

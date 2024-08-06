@@ -1,9 +1,11 @@
 {
   "type": "module",
   "dependencies": {
+    "axios": "^1.7.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "firebase": "^10.12.5",
     "nodemailer": "^6.9.14",
     "resend": "^3.4.0"
   }

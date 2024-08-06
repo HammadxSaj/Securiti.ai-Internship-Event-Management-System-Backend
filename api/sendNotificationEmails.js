@@ -247,10 +247,7 @@ const listenForNewEvents = () => {
   });
 };
 
-<<<<<<< Updated upstream
-=======
 export { initializeNotificationService, listenForNewEvents } 
->>>>>>> Stashed changes
 // Start the services
 // initializeNotificationService();
 // listenForNewEvents();
