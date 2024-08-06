@@ -55,5 +55,10 @@ app.listen(port, () => {
 });
 
 
+<<<<<<< Updated upstream
 // initializeNotificationService();
 // listenForNewEvents();
+=======
+initializeNotificationService();
+listenForNewEvents();
+>>>>>>> Stashed changes
